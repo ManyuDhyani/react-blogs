@@ -1,3 +1,4 @@
+import BlogDetails from './BlogDetails';
 import Navbar from './Navbar';
 import Home from './home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -9,13 +10,14 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route>
-              <Route exact path="/">
+            <Route exact path="/">
                 <Home />
-              </Route>
             </Route>
-            <Route path="/create">
+            {/* <Route path="/create">
               <Create />
+            </Route> */}
+            <Route path="/blogs/:id ">
+              <BlogDetails />
             </Route>
           </Switch>
         </div>
